@@ -1,23 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <title>Halaman Utama</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial;
+      }
+      header {
+        background-color: dimgrey;
+        padding: 30px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: grey;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav ul li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      nav ul li a:active {
+        background-color: black;
+        color: white;
+      }
+      nav ul li a:hover:not(.active) {
+        background-color: ;
+      }
+      article {
+        float: left;
+        width: 70%;
+        padding: 20px;
+      }
+      section::after {
+        clear: both;
+        display: table;
+        content: '';
+      }
+      footer {
+        background-color: dimgrey;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      p::first-letter {
+        font-size: xx-large;
+      }
+      /* responsive layout */
+      @media (max-width: 300px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
+    <header>
+      <h1>Web Portofolio</h1>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>Home</h1>
+        <p>
+          Website ini adalah tentang Portofolio saya yang telah dikumpulkan
+          semenjak saya kuliah semester 1.
+        </p>
+        <p>
+          Silahkan klik dibagian menu untuk menelusuri web saya. Apabila
+          terdapat pertanyaan. Silakan hubungi saya melalui menu Contact.
+        </p>
+      </article>
+    </section>
+    <footer>&copy; Copyright 2023</footer>
   </body>
 </html>
